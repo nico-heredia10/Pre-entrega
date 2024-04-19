@@ -1,0 +1,164 @@
+
+
+body{
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    padding: 15px;
+
+    
+}
+
+.nav{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+   
+}
+
+
+.nav ul li a{
+
+    color: blanchedalmond;
+    text-decoration: none;
+    align-items: center;
+}
+
+.carruzel{
+
+    justify-content: center;
+    align-items: center;
+}
+
+.carruzel img{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+     
+}
+
+.carruzel .img{
+
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.contenido{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido h1{
+
+    text-align: center;
+    color: salmon;
+    text-decoration: underline;
+    margin: 20px;
+}
+
+.contenido img{
+
+    width: 70%;
+    height: auto;
+    margin-top: 25px;
+}
+
+footer{
+
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 25% 25%;
+    margin-top: 25px;
+}
+
+.navegacion{
+
+    width: 100%;
+    
+}
+
+.navegacion ul{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+}
+
+.navegacion ul li{
+
+    list-style: none;
+    
+}
+
+.navegacion ul li a{
+
+    text-decoration: none;
+    color: blanchedalmond;
+    display: block;
+}
+
+.p1{
+
+    grid-row: 1;
+    margin-left: -15px;
+    
+}
+
+.p2{
+
+   grid-row: 2;
+   margin-left: -15px;
+}
+
+.pagos{
+
+    margin-left: 30px;
+}
+
+.pagos p{
+
+    margin: 5px 0;
+}
+
+.envios{
+
+    grid-column: span 2;
+    align-content: center;
+    margin-top: -40px;
+}
+
+.envios h3{
+
+    text-align: center;
+}
+
+.contacto p{
+
+    margin: -5px 0;
+
+}
+
+ @media screen and (min-width: 600px){
+
+    body{
+        background-color: aqua;
+    }
+}
