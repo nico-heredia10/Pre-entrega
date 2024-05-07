@@ -1,0 +1,144 @@
+
+/* ----------PRODUCTOS-------------*/
+
+.product{
+
+    position: relative;
+    text-align: right;
+    margin-right: 50px;
+    margin-top: -20px;
+    padding: 20px;
+    color: salmon;
+    
+}
+
+.menu{
+    h2{
+
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        color: salmon;
+    }
+}
+
+.tecno {
+
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30% 15% 30% 15% ;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    margin-left: -10px;
+
+    .imgA{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 10px 10px 1px saddlebrown;
+
+    }
+
+    .imgB{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 10px 10px 1px saddlebrown;
+    }
+
+    .imgC{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 10px 10px 1px saddlebrown;
+    }
+
+    .imgD{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 10px 10px 1px saddlebrown;
+    }
+
+    p{
+        
+        text-align: center;
+        margin-top: 20%;
+        color: aquamarine;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1200px){
+    
+    .tecno{
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, fr);
+        grid-template-rows: 80% 18%;
+        width: 100%;
+        height: auto;
+
+        .imgA{
+            grid-column: 1 / 2;
+            grid-area: 1 / 2;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .imgB{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            width: 100%;
+            
+        }
+
+        .imgC{
+
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            width: 100px;
+        }
+
+        .imgD{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            width: 100px;
+        }
+
+        .nombreA{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            text-align: center;
+
+        }
+
+        .nombreB{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            text-align: center;
+
+        }
+
+        .nombreC{
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            text-align: center;
+        }
+
+        .nombreD{
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+        }
+    }
+
+}
