@@ -1,8 +1,11 @@
 
-@mixin tamaño(width, height){
 
-    width: $width;
-    height: $height;
-
+@mixin grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30% 15% 30% 15% ;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    margin-left: -10px;
 }
-

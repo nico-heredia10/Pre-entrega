@@ -1,7 +1,9 @@
 
 /* ----------PRODUCTOS-------------*/
 
-
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/animation";
 
 .product{
 
@@ -10,7 +12,11 @@
     margin-right: 50px;
     margin-top: -20px;
     padding: 20px;
-    color: salmon;
+    color: $color-primario;
+
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
     
 }
 
@@ -20,7 +26,8 @@
         text-align: center;
         margin-top: 2%;
         margin-bottom: 5%;
-        color: salmon;
+        color: $color-primario;
+        
     }
 }
 
@@ -28,13 +35,7 @@
 
 .tecno {
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 30% 15% 30% 15% ;
-    gap: 20px;
-    width: 100%;
-    height: auto;
-    margin-left: -10px;
+    @include grid;
     
 
     .imgA{
@@ -75,7 +76,7 @@
         
         text-align: center;
         margin-top: 20%;
-        color: aquamarine;
+        color: $color-secundario;
     }
 
     

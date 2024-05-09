@@ -55,6 +55,9 @@
   height: auto;
   margin-top: 25px;
 }
+.contenido h2 {
+  color: salmon;
+}
 
 h1 {
   text-align: center;
@@ -179,12 +182,23 @@ footer {
     text-align: center;
     margin-bottom: 80px;
   }
+  .contenido h2 {
+    color: salmon;
+  }
   footer {
     margin-top: -20px;
     height: 30vh;
   }
 }
 /* ----------PRODUCTOS-------------*/
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .product {
   position: relative;
   text-align: right;
@@ -192,6 +206,9 @@ footer {
   margin-top: -20px;
   padding: 20px;
   color: salmon;
+  animation-duration: 3s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
 }
 
 .menu h2 {
