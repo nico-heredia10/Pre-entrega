@@ -31,7 +31,6 @@
         li a{
             color: blanchedalmond;
             text-decoration: none;
-            align-items: center;
         }
     }
 }
@@ -101,7 +100,7 @@ footer{
     ul{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px; 
+        gap: 20px; 
         li{
             list-style: none;
             a{
@@ -229,6 +228,8 @@ footer{
 
         margin-top: -20px;
         height: 30vh;
+        
+        
     }
     
 
@@ -237,3 +238,4 @@ footer{
 // FIN DE ESTILOS PARA HTML MENU (PRINCIPAL)
 
 @import "productos";
+@import "contacto";

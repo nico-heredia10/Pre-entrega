@@ -5,52 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../estlidodepre-entrega/estilos.css">
+    <link rel="stylesheet" href="../estilos/estiloss.css">
 </head>
-<body>
+<body class="contacto">
 
-    <header class="html2">
+    <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html" target="_blank">Inicio</a></li>
             </ul>
         </nav>
         <img src="" alt="">
     </header>
-    <section>
-
-        <h1>Contatos</h1>
-        <P>21351353</P>
-        <P>Ffafas@mail.com</P>
-        <p>Siguenos en Instagram</p>
-        <p>Siguenos en Facebook</p>
+    <section class="cont1">
+        <section>
+            <h1>Contactos</h1>
+        </section>
+        
+        <P class="p1"><img src="https://static.vecteezy.com/system/resources/previews/021/460/383/original/whatsapp-logo-free-png.png" alt="">21351353</P>
+        <P class="p2"> <img src="https://static.vecteezy.com/system/resources/previews/000/581/942/original/email-icon-vector-illustration.jpg" alt="">Ffafas@mail.com</P>
+        <p class="p3"><img src="https://static.vecteezy.com/system/resources/previews/002/534/049/original/social-media-icon-instagram-logo-free-vector.jpg" alt="">Siguenos en Instagram</p>
+        <p class="p4"><img src="https://www.verfvanniveau.nl/wp-content/uploads/2019/08/logo-social-fb-facebook-icon.png" alt="">Siguenos en Facebook</p>
 
     </section>
-    <section>
+    <section class="cont2">
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <label for="nombre" class="input1">Nombre: 
+            <input type="text" id="nombre" name="nombre" required>
+        </label>
+        
         <br>
-        <label for="email">Correo electronico:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="numero" class="input2">Telefono:
+            <input type="tel" id="numero" name="numero">
+        </label>
+        
         <br>
-        <label for="numero">Telefono:</label>
-        <input type="tel" id="numero" name="numero">
+        <label for="email" class="input3">Correo:
+            <input type="email" id="email" name="email" required>
+        </label>
+        
         <br>
-        <label for="mensaje">Mensaje:</label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        <label for="mensaje" class="input4">Mensaje:
+            <textarea type="mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        </label>
+        
 
-        <button type="submit">Enviar</button>
+        <button type="submit" class="enviar">Enviar</button>
     </section>
-    <footer>
+    <footer class="pie">
         <div class="navegacion">
             <h3>Navegacion</h3>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Contacto/contacto.html">Contacto</a></li>
-                <li><a href="Producto/producto.html">Productos</a></li>
-                <li><a href="Nosotros/nosotros.html">Nosotros</a></li>
-                <li><a href="Como comprar/compra.html">Como comprar</a></li>
+                <li><a href="index.html" class="p1">Inicio</a></li>
+                <li><a href="Contacto/contacto.html" class="p1">Contacto</a></li>
+                <li><a href="Producto/producto.html" class="p1">Productos</a></li>
+                <li><a href="Nosotros/nosotros.html" class="p2">Nosotros</a></li>
+                <li><a href="Como comprar/compra.html" class="p2">Como comprar</a></li>
             </ul>
         </div>
         <div class="pagos">
@@ -71,8 +81,5 @@
     </footer>
 </body>
 
-<footer>
-    <p><legend>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vero aperiam qui autem, harum voluptatibus blanditiis sunt at repellat labore, illum ipsam optio? Et, velit maiores? Dolores harum quod totam.
-    </legend></p>
-</footer>
+
 </html>

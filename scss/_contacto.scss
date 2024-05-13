@@ -1,0 +1,220 @@
+/* ------------ HTML de Contactos ---------------- */
+
+
+@import "../utilidades/variables";
+@import "../utilidades/animation";
+
+
+.contacto{
+    background-color: $color_fondo;
+    margin-left: 2%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 2%;
+
+    display: grid;
+    grid-template-areas: 
+                        "nav nav nav"
+                        "cont1 cont1 cont1"
+                        "cont2 cont2 cont2"
+                        "footer footer footer";
+    header{
+        grid-area: nav;
+    }
+
+    .cont1{
+        grid-area: cont1;
+    }
+
+    .cont2{
+        grid-area: cont2;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    header{
+        nav{
+            display: flex;
+            max-width: 100%;
+            justify-content: center;
+            align-content: center;
+            margin-top: 15px;
+            margin-bottom: 15%;
+            ul{
+                list-style: none;
+                
+                li a{
+                    text-decoration: none;
+                    color: $color-nav;
+                   
+                }
+            }
+        }
+    }
+
+    .cont1{ 
+
+        display:flex ;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+       
+
+        h1{
+            text-align: center;
+            position: relative;
+            bottom: 250%;
+            left: 50%;
+            margin-bottom: 40px;
+
+        }
+       
+        .p1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            text-align: center;
+            position: relative;
+            bottom: 10px;
+            
+            img{
+                width: 15%;
+                height: auto;
+                position: relative;
+                top: 15px;
+                
+            }
+        }
+
+        .p2{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            text-align: center;
+
+            img{
+                width: 10%;
+                height: auto;
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        .p3{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            text-align: center;
+            margin-top: 15px;
+
+            img{
+                width: 10%;
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        .p4{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            text-align: center;
+            margin-top: 15px;
+
+            img{
+                width: 10%;
+                position: relative;
+                top: 10px;
+            }    
+
+        }
+    }
+
+    .cont2{
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 42% 42% 16%;
+        
+        .input1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            margin-top: 5%;
+            
+        }
+
+        label input[type="text"]:focus {
+
+            transition: width height 0.3s ease forwards;            
+            width: 200px;
+            height: 50px;
+
+        }
+       
+        .input2{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            margin-top: 30%;
+        }
+
+        label input[type="tel"]:focus{
+            transition: width height 0.3s ease forwards;            
+            width: 200px;
+            height: 50px;
+        }
+
+        .input3{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            margin-top: 55%;
+        }
+
+        label input[type="email"]:focus{
+            transition: width height 0.3s ease forwards;            
+            width: 200px;
+            height: 50px;
+        }   
+
+        .input4{
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+
+       
+        .enviar{
+            display: flex;
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            width: 30%;
+            height: 50%;
+            background-color: cornflowerblue ;
+            justify-self: center;
+            align-self: center;
+            justify-content: center;
+        }
+    }
+
+    footer{
+        margin-top: 40px;
+        
+        .navegacion{
+            ul{
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+        }
+
+        .pagos{
+            p{
+                margin: 10px;
+            }
+        }
+
+        .contacto{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
