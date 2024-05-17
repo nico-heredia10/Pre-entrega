@@ -18,37 +18,46 @@
         <img src="" alt="">
     </header>
     <section class="cont1">
-        <section>
-            <h1>Contactos</h1>
+        <section class="redes">
+            <P class="p1"><img src="https://i1.wp.com/cmesit.com/wp-content/uploads/2018/07/logo-whatsapp.png" alt="">21351353</P>
+            <P class="p2"> <img src="https://static.vecteezy.com/system/resources/previews/000/581/942/original/email-icon-vector-illustration.jpg" alt="">Ffafas@mail.com</P>
+            <p class="p3"><img src="https://static.vecteezy.com/system/resources/previews/002/534/049/original/social-media-icon-instagram-logo-free-vector.jpg" alt="">Siguenos en Instagram</p>
+            <p class="p4"><img src="https://www.verfvanniveau.nl/wp-content/uploads/2019/08/logo-social-fb-facebook-icon.png" alt="">Siguenos en Facebook</p>
         </section>
-        
-        <P class="p1"><img src="https://static.vecteezy.com/system/resources/previews/021/460/383/original/whatsapp-logo-free-png.png" alt="">21351353</P>
-        <P class="p2"> <img src="https://static.vecteezy.com/system/resources/previews/000/581/942/original/email-icon-vector-illustration.jpg" alt="">Ffafas@mail.com</P>
-        <p class="p3"><img src="https://static.vecteezy.com/system/resources/previews/002/534/049/original/social-media-icon-instagram-logo-free-vector.jpg" alt="">Siguenos en Instagram</p>
-        <p class="p4"><img src="https://www.verfvanniveau.nl/wp-content/uploads/2019/08/logo-social-fb-facebook-icon.png" alt="">Siguenos en Facebook</p>
+
+        <section class="h1">
+            <h1>Contacto</h1>
+        </section>
 
     </section>
+
+    
+
     <section class="cont2">
 
-        <label for="nombre" class="input1">Nombre: 
-            <input type="text" id="nombre" name="nombre" required>
+        <label for="nombre" class="input1">Nombre:
         </label>
+        <input type="text" id="nombre" name="nombre" class="escribir" required>
+        <br>
+
+        <label for="apellido" class="input1">Apellido:
+        </label>
+        <input type="text" id="apellido" name="apellido" class="escribir" required>
+
+        <br>
+        <label for="numero" class="input1">Telefono:
+        </label>
+        <input type="tel" id="numero" name="numero" class="escribir" required>
+
+        <br>
+        <label for="email" class="input1">Correo:
+        </label>
+        <input type="email" id="email" name="email" class="escribir" required>
         
         <br>
-        <label for="numero" class="input2">Telefono:
-            <input type="tel" id="numero" name="numero">
+        <label for="mensaje" class="input1">Mensaje:
         </label>
-        
-        <br>
-        <label for="email" class="input3">Correo:
-            <input type="email" id="email" name="email" required>
-        </label>
-        
-        <br>
-        <label for="mensaje" class="input4">Mensaje:
-            <textarea type="mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-        </label>
-        
+        <textarea type="mensaje" name="mensaje" id="mensaje" cols="30" rows="10" class="escribir"></textarea>
 
         <button type="submit" class="enviar">Enviar</button>
     </section>
@@ -57,10 +66,10 @@
             <h3>Navegacion</h3>
             <ul>
                 <li><a href="index.html" class="p1">Inicio</a></li>
-                <li><a href="Contacto/contacto.html" class="p1">Contacto</a></li>
-                <li><a href="Producto/producto.html" class="p1">Productos</a></li>
-                <li><a href="Nosotros/nosotros.html" class="p2">Nosotros</a></li>
-                <li><a href="Como comprar/compra.html" class="p2">Como comprar</a></li>
+                <li><a href="../Contacto/contacto.html" target="_blank" class="p1">Contacto</a></li>
+                <li><a href="../Producto/producto.html"     class="p1" target="_blank">Productos</a></li>
+                <li><a href="../Nosotros/nosotros.html" class="p2" target="_blank">Nosotros</a></li>
+                <li><a href="../Como comprar/compra.html" class="p2" target="_blank">Como comprar</a></li>
             </ul>
         </div>
         <div class="pagos">
@@ -69,7 +78,7 @@
             <p>Credito</p>
             <p>transferencia</p>
         </div>
-        <div>
+        <div class="envios">
             <h3>Formas de envio</h3>
         </div>
         <div class="contacto">

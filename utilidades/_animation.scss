@@ -16,3 +16,15 @@
         
     }
 }
+
+@keyframes escala_foto {
+
+    0%{
+        transform: scale(0,0);
+    }
+
+    30%{
+        transform: scale(1,1);
+    }
+    
+}
