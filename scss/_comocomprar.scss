@@ -1,0 +1,233 @@
+/* --------------- Como Comprar -----------------*/
+
+@import "../utilidades/variables";
+
+
+.comprar{
+
+    background-color: $color_fondo;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    header{
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $color-nav;
+                    }
+                }
+            }
+        }
+    }
+
+    section{
+
+        p{
+            margin-top: 30px;
+            margin-left: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+        }
+
+        ul{
+            margin: 25px;
+            li{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: 600;
+                margin: 10px;
+            }
+        }
+    }
+
+    footer{
+        .navegacion{
+            ul{
+                margin-left: 20px;
+                li{
+                    .p1{
+                        position: relative;
+                        left: 15px;
+                    }
+
+                    .p2{
+                        position: relative;
+                        top: -90px;
+                    }
+                }
+            }
+        }
+
+        .pagos{
+            p{ 
+                margin: 8px;
+            }
+        }
+
+        .contacto{
+            margin: 3px;
+
+            p{
+                margin: 10px;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    
+    .comprar{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        header{
+            ul{
+                li{
+                    a{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        section{
+            width: 80%;
+
+            p{
+                margin: 30px;
+            }
+
+            ul{
+                margin: 50px;
+                li{
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        footer{
+            margin-top: 30px;
+
+            .navegacion{
+                h3{
+                    font-size: x-large;
+                    letter-spacing: 2px;
+                }
+                ul{
+                    li{
+                        .p1{
+                            position: relative;
+                            left: 50px;
+                            font-weight: 600;
+                        }
+                        .p2{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .pagos{
+                h3{
+                    font-size: x-large;
+                    letter-spacing: 2px;
+                }
+
+                p{
+                    font-weight: 600;
+                }
+            }
+
+            .contacto{
+                h3{
+                    font-size: x-large;
+                    letter-spacing: 2px;
+                }
+
+                font-weight: 600;
+            }
+
+            .envios{
+                h3{
+                    font-size: x-large;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .comprar{
+        
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            h1{
+                font-size: 50px;
+                
+            }
+
+            ul{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                
+                li{
+                    margin: 20px;
+                }
+            }
+        }
+
+        footer{
+            margin-top: 100px;
+            
+            .navegacion{
+                
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    li{
+
+                        .p1{
+                            margin-top: 50px;
+                        }
+                        .p2{
+                            margin-top: 140px;
+                        }
+                    }
+                }
+            }
+
+            .pagos{
+                p{
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+
+            .contacto{
+                p{
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

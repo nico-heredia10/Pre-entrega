@@ -4,13 +4,15 @@
 @import "../utilidades/variables";
 @import "../utilidades/animation";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-.contacto{
+.contactanos{
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     background-color: $color_fondo;
     margin-left: 2%;
     width: 100%;
@@ -191,7 +193,11 @@
             ul{
                 margin-top: 15px;
                 margin-left: 10px;
-            
+                li{
+                    .p2{
+                        margin-top: 10px;
+                    }
+                }
             }
         }
 
@@ -204,7 +210,8 @@
         .contacto{
             display: flex;
             flex-direction: column;
-        
+            position: relative;
+            top: 20px;
         }
 
         
@@ -215,7 +222,7 @@
 
 @media  screen and (min-width: 768px) {
     
-    .contacto{
+    .contactanos{
         display: flex;
         flex-direction: column;
         align-items: center; /* Centra los elementos horizontalmente */
@@ -309,7 +316,7 @@
                         }
     
                         .p2{
-                            position: relative;
+                            margin-top: 10px;
                             
                     
                         }
@@ -328,8 +335,7 @@
             }
 
             .contacto{
-                position: relative;
-                bottom: 15px;
+
                 h3{
                     font-size: x-large;
                 }
@@ -352,7 +358,7 @@
 
 @media screen and (min-width: 1024px) {
 
-    .contacto{
+    .contactanos{
         .cont2{
             width: 60%;
             margin-left: 20%;
@@ -361,7 +367,35 @@
 
         footer{
             margin-top: 10%;
+
+           .navegacion{
+                ul{
+                    li{
+                        .p2{
+                            position: relative;
+                            top: 10px;
+                        }
+                    }
+                }
+            }
+
+            .pagos{
+                p{
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                    font-weight: 700;
+                }
+            }
+
+            .contacto{
+                p{
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }
+     
 
