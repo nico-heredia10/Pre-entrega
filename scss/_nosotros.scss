@@ -10,9 +10,21 @@
         box-sizing: border-box;
     }
 
+    width: 100%;
+    height: auto;
     background-color: $color_fondo;
     padding: 10px;
+
+
     header{
+
+        .logo{
+            
+            img{
+                width: 10%;
+                object-fit: cover;
+            }
+        }
         nav{
             display: flex;
             flex-direction: row;
@@ -30,7 +42,7 @@
         }
     }
 
-    section{
+    .description{
         width: 100%;
         margin-top: 10px;
         border: solid 4px black ;
@@ -38,7 +50,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+
+        h1{
+            text-align: center;
+            color: $color-primario;
+            text-decoration: underline;
+            margin-top:  30px;
+         }
 
         p{
             margin-top: 20px;
@@ -172,9 +191,39 @@
         justify-content: center;
         align-items: center;
 
-        section{
+        header{
+            width: 100%;
+            display: flex;
+            
+
+            .logo{
+                width: 80px;
+                height: auto;
+                
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            nav{
+                margin-top: 100px;
+                flex-grow: 1;
+                position: relative;
+                right: 50px;
+                ul{
+                    li{
+                        a{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .description{
             width: 80%;
-            padding: 15px;
+            padding: 5px;
             border: solid 5px black;
             box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
             display: flex;
@@ -246,7 +295,7 @@
     .nosotros{
 
         header{
-            margin-top: 10px;
+            
             nav{
                 ul{
                     li{
@@ -258,7 +307,7 @@
             }
         } 
 
-        section{
+        .description{
             width: 70%;
             padding: 50px;
 
@@ -274,38 +323,54 @@
         }
 
         footer{
-            margin-top: 90px;
+
+            margin-top: 100px;
 
             .navegacion{
+                position: relative;
+                bottom: 50px;
                 ul{
-                    display: flex;
+                    display:flex;
                     flex-direction: row;
-                    gap: 50px;
-                    position: relative;
-                    left: 80px;
+                    flex-wrap: wrap;
+                    
                     li{
-                        display: flex;
-                        flex-direction: row;
-                         
+                       margin: 0 2px; 
+                        .p1{
+                           margin-top: 20px; 
+                           font-size: 20px;
+                           font-weight: 600;
+                           letter-spacing: 2px;
+                        }
+    
+                        .p2{
+                            position: relative;
+                            top: 20px;
+                            margin-left: -60px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                        }
                     }
                 }
             }
-
+    
             .pagos{
-                margin-left: 50px;
+                position: relative;
+                bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                
                 p{
-                    font-size: 20px;
-                    font-weight: 700;
-                    position: relative;
-                    left: 80px;
+                    flex-direction: row;
+                    font-weight: 600;
+                    margin: 10px;
                 }
             }
 
             .contacto{
                 p{
-                    font-size: 20px;
-                    margin: 10px;
-                    font-weight: 700;
+                    font-weight: 600
                 }
             }
         }

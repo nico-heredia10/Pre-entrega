@@ -20,55 +20,55 @@
     transform: scale(1, 1);
   }
 }
-* {
+.cuerpo {
+  background-color: gray;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  gap: 15px;
+  /* -------- footer -------- */
+}
+.cuerpo * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-.cuerpo {
-  background-color: grey;
-  width: 100%;
-  height: auto;
-  margin: 5px;
-  padding: 15px;
-  gap: 15px;
-}
-
-.nav {
+.cuerpo header .nav {
   display: flex;
   max-width: 100%;
   justify-content: center;
   align-items: center;
 }
-.nav ul {
+.cuerpo header .nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-.nav ul li a {
+.cuerpo header .nav ul li a {
   color: blanchedalmond;
   text-decoration: none;
 }
-
-.carruzel {
+.cuerpo header section img {
+  width: 10%;
+  object-fit: cover;
+}
+.cuerpo .carruzel {
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
-.carruzel img {
+.cuerpo .carruzel img {
   width: 100%;
   height: 100px;
   object-fit: cover;
 }
-
-h1 {
+.cuerpo h1 {
   text-align: center;
   color: salmon;
   text-decoration: underline;
   margin-top: 30px;
 }
-
-.contenido {
+.cuerpo .contenido {
   width: 100%;
   height: auto;
   display: flex;
@@ -78,18 +78,20 @@ h1 {
   margin-top: 40px;
   gap: 15px;
 }
-.contenido img {
+.cuerpo .contenido img {
   width: 70%;
   height: auto;
   margin-top: 25px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
-.contenido h2 {
+.cuerpo .contenido img:hover {
+  transform: scale(1.1);
+}
+.cuerpo .contenido h2 {
   color: salmon;
 }
-
-/* -------- footer -------- */
-footer {
+.cuerpo footer {
   width: 100%;
   height: 30vh;
   display: grid;
@@ -98,58 +100,59 @@ footer {
   margin-top: 50px;
   gap: 10px;
 }
-footer .navegacion {
+.cuerpo footer .navegacion {
   width: 100%;
   height: auto;
   grid-column: 1/2;
   grid-row: 1/2;
 }
-footer .navegacion h3 {
+.cuerpo footer .navegacion h3 {
   text-align: center;
 }
-footer .navegacion ul {
+.cuerpo footer .navegacion ul {
   width: 100%;
 }
-footer .navegacion ul li {
+.cuerpo footer .navegacion ul li {
   list-style: none;
   gap: 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 10px;
 }
-footer .navegacion ul li .p1 {
+.cuerpo footer .navegacion ul li .p1 {
   text-decoration: none;
   color: blanchedalmond;
   grid-column: 1/2;
   position: relative;
+  left: 20px;
 }
-footer .navegacion ul li .p2 {
+.cuerpo footer .navegacion ul li .p2 {
   text-decoration: none;
   color: blanchedalmond;
   grid-column: 2/3;
   position: relative;
   bottom: 100px;
 }
-footer .pagos {
+.cuerpo footer .pagos {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-footer .pagos h3 {
+.cuerpo footer .pagos h3 {
   text-align: center;
 }
-footer .pagos p {
+.cuerpo footer .pagos p {
   font-weight: 500;
   position: relative;
   left: 40px;
 }
-footer .envios {
+.cuerpo footer .envios {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-footer .envios h3 {
+.cuerpo footer .envios h3 {
   text-align: center;
 }
-footer .contacto {
+.cuerpo footer .contacto {
   grid-column: 1/2;
   grid-row: 2/3;
   margin-top: 10px;
@@ -157,26 +160,36 @@ footer .contacto {
   flex-direction: column;
   margin-top: -20px;
 }
-footer .contacto h3 {
+.cuerpo footer .contacto h3 {
   text-align: center;
 }
-footer .contacto p {
+.cuerpo footer .contacto p {
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .carruzel {
+  .cuerpo header section {
+    width: 80px;
+    height: auto;
+  }
+  .cuerpo header section img {
+    width: 100%;
+  }
+  .cuerpo header nav ul li a {
+    font-size: 25px;
+  }
+  .cuerpo .carruzel {
     height: 200px;
   }
-  .carruzel .img {
+  .cuerpo .carruzel .img {
     width: auto;
     height: auto;
     object-fit: cover;
   }
-  h1 {
+  .cuerpo h1 {
     margin-top: 50px;
   }
-  .contenido {
+  .cuerpo .contenido {
     display: flex;
     display: grid;
     width: 100%;
@@ -186,7 +199,7 @@ footer .contacto p {
     grid-template-rows: 80% 20%;
     overflow: hidden;
   }
-  .contenido .img1 {
+  .cuerpo .contenido .img1 {
     grid-column: span 1;
     grid-row: 1/2;
     width: 100%;
@@ -194,10 +207,10 @@ footer .contacto p {
     padding: 5px;
     transition: transform 0.3s ease;
   }
-  .contenido .img1:hover {
+  .cuerpo .contenido .img1:hover {
     transform: scale(1.2);
   }
-  .contenido .img2 {
+  .cuerpo .contenido .img2 {
     grid-column: 2/3;
     grid-row: 1/2;
     width: 100%;
@@ -205,10 +218,10 @@ footer .contacto p {
     padding: 5px;
     transition: transform 0.3s ease;
   }
-  .contenido .img2:hover {
+  .cuerpo .contenido .img2:hover {
     transform: scale(1.2);
   }
-  .contenido .img3 {
+  .cuerpo .contenido .img3 {
     grid-column: 3/4;
     grid-row: 1/2;
     width: 100%;
@@ -216,70 +229,97 @@ footer .contacto p {
     padding: 5px;
     transition: transform 0.3s ease;
   }
-  .contenido .img3:hover {
+  .cuerpo .contenido .img3:hover {
     transform: scale(1.2);
   }
-  .contenido .smartwatch {
+  .cuerpo .contenido .smartwatch {
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: center;
     margin-bottom: 100px;
   }
-  .contenido .celulares {
+  .cuerpo .contenido .celulares {
     grid-column: 2/3;
     grid-row: 2/3;
     text-align: center;
     margin-bottom: 100px;
   }
-  .contenido .auriculares {
+  .cuerpo .contenido .auriculares {
     grid-column: 3/4;
     grid-row: 2/3;
     text-align: center;
     margin-bottom: 100px;
   }
-  .contenido h2 {
+  .cuerpo .contenido h2 {
     color: salmon;
   }
-  footer {
+  .cuerpo footer {
     margin-top: -20px;
     height: 30vh;
   }
-  footer .navegacion h3 {
+  .cuerpo footer .navegacion h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
     text-align: center;
   }
-  footer .navegacion ul li .p1 {
+  .cuerpo footer .navegacion ul li .p1 {
     position: relative;
     left: 70px;
   }
-  footer .navegacion ul li .p2 {
+  .cuerpo footer .navegacion ul li .p2 {
     position: relative;
     left: 40px;
   }
-  footer .pagos p {
+  .cuerpo footer .pagos h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+  }
+  .cuerpo footer .pagos p {
     position: relative;
     left: 100px;
   }
+  .cuerpo footer .contacto {
+    margin-top: 10px;
+  }
+  .cuerpo footer .contacto h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+  }
+  .cuerpo footer .contacto p {
+    font-weight: 600;
+    margin: 10px;
+  }
+  .cuerpo footer .envios h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+  }
 }
 @media screen and (min-width: 1024px) {
-  footer .navegacion {
+  .cuerpo header ul li a {
+    font-size: 30px;
+  }
+  .cuerpo footer {
+    margin-top: 30px;
+  }
+  .cuerpo footer .navegacion {
     position: relative;
     bottom: 50px;
   }
-  footer .navegacion ul {
+  .cuerpo footer .navegacion ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  footer .navegacion ul li {
+  .cuerpo footer .navegacion ul li {
     margin: 0 2px;
   }
-  footer .navegacion ul li .p1 {
+  .cuerpo footer .navegacion ul li .p1 {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 2px;
   }
-  footer .navegacion ul li .p2 {
+  .cuerpo footer .navegacion ul li .p2 {
     position: relative;
     top: 20px;
     margin-left: -60px;
@@ -287,14 +327,19 @@ footer .contacto p {
     font-weight: 600;
     letter-spacing: 2px;
   }
-  footer .pagos {
+  .cuerpo footer .pagos {
     position: relative;
     bottom: 50px;
     display: flex;
     flex-direction: column;
   }
-  footer .pagos p {
+  .cuerpo footer .pagos p {
     flex-direction: row;
+    font-weight: 600;
+    margin: 10px;
+  }
+  .cuerpo footer .contacto p {
+    font-weight: 600;
   }
 }
 /* ----------PRODUCTOS-------------*/
@@ -320,7 +365,35 @@ footer .contacto p {
     transform: scale(1, 1);
   }
 }
-.product {
+.productos {
+  background-color: gray;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+.productos * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.productos header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.productos header nav ul {
+  list-style: none;
+}
+.productos header nav ul li a {
+  color: blanchedalmond;
+  text-decoration: none;
+}
+.productos header section img {
+  width: 10%;
+  object-fit: cover;
+}
+.productos .product {
   position: relative;
   text-align: right;
   margin-right: 50px;
@@ -331,15 +404,13 @@ footer .contacto p {
   animation-name: aparecer;
   animation-iteration-count: infinite;
 }
-
-.menu h2 {
+.productos .menu h2 {
   text-align: center;
   margin-top: 2%;
   margin-bottom: 5%;
   color: salmon;
 }
-
-.tecno {
+.productos .tecno {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 30% 15% 30% 15%;
@@ -348,52 +419,193 @@ footer .contacto p {
   height: auto;
   margin-left: -10px;
 }
-.tecno .imgA {
+.productos .tecno .imgA {
   grid-column: 1/2;
   grid-row: 1/2;
   width: 100%;
   object-fit: cover;
   box-shadow: 10px 10px 1px saddlebrown;
+  transition: transform 0.3s ease;
 }
-.tecno .imgB {
+.productos .tecno .imgA:hover {
+  transform: scale(1.1);
+}
+.productos .tecno .imgB {
   grid-column: 2/3;
   grid-row: 1/2;
   width: 100%;
   height: auto;
   object-fit: cover;
   box-shadow: 10px 10px 1px saddlebrown;
+  transition: transform 0.3s ease;
 }
-.tecno .imgC {
+.productos .tecno .imgB:hover {
+  transform: scale(1.1);
+}
+.productos .tecno .imgC {
   grid-column: 1/2;
   grid-row: 3/4;
   width: 100%;
   object-fit: cover;
   box-shadow: 10px 10px 1px saddlebrown;
+  transition: transform 0.3s ease;
 }
-.tecno .imgD {
+.productos .tecno .imgC:hover {
+  transform: scale(1.1);
+}
+.productos .tecno .imgD {
   grid-column: 2/3;
   grid-row: 3/4;
   width: 100%;
   object-fit: cover;
   box-shadow: 10px 10px 1px saddlebrown;
+  transition: transform 0.3s ease;
 }
-.tecno p {
+.productos .tecno .imgD:hover {
+  transform: scale(1.1);
+}
+.productos .tecno p {
   text-align: center;
   margin-top: 20%;
   color: aquamarine;
 }
+.productos footer {
+  width: 100%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 50%;
+  margin-top: 50px;
+  gap: 10px;
+}
+.productos footer .navegacion {
+  width: 100%;
+  height: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.productos footer .navegacion h3 {
+  text-align: center;
+}
+.productos footer .navegacion ul {
+  width: 100%;
+}
+.productos footer .navegacion ul li {
+  list-style: none;
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
+}
+.productos footer .navegacion ul li .p1 {
+  text-decoration: none;
+  color: blanchedalmond;
+  grid-column: 1/2;
+  position: relative;
+  left: 20px;
+}
+.productos footer .navegacion ul li .p2 {
+  text-decoration: none;
+  color: blanchedalmond;
+  grid-column: 2/3;
+  position: relative;
+  bottom: 100px;
+}
+.productos footer .pagos {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.productos footer .pagos h3 {
+  text-align: center;
+}
+.productos footer .pagos p {
+  font-weight: 500;
+  position: relative;
+  left: 40px;
+}
+.productos footer .envios {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.productos footer .envios h3 {
+  text-align: center;
+}
+.productos footer .contacto {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+}
+.productos footer .contacto h3 {
+  text-align: center;
+}
+.productos footer .contacto p {
+  text-align: center;
+}
 
-@media screen and (min-width: 600px) {
-  .tecno .imgA, .tecno .imgB, .tecno .imgC, .tecno .imgD {
+@media screen and (min-width: 768px) {
+  .productos header section {
+    width: 80px;
+    height: auto;
+  }
+  .productos header section img {
+    width: 100%;
+  }
+  .productos header nav ul li a {
+    font-size: 25px;
+  }
+  .productos .tecno .imgA, .productos .tecno .imgB, .productos .tecno .imgC, .productos .tecno .imgD {
     width: 80%;
     margin-left: 5%;
   }
-  .tecno p {
+  .productos .tecno p {
     margin-right: 10%;
+  }
+  .productos footer {
+    margin-top: -20px;
+    height: 30vh;
+  }
+  .productos footer .navegacion h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .productos footer .navegacion ul li .p1 {
+    position: relative;
+    left: 70px;
+  }
+  .productos footer .navegacion ul li .p2 {
+    position: relative;
+    left: 40px;
+  }
+  .productos footer .pagos h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+  }
+  .productos footer .pagos p {
+    position: relative;
+    left: 100px;
+  }
+  .productos footer .contacto {
+    margin-top: 10px;
+  }
+  .productos footer .contacto h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+  }
+  .productos footer .contacto p {
+    font-weight: 600;
+    margin: 10px;
+  }
+  .productos footer .envios h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .tecno {
+  .productos .tecno {
     display: flex;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -404,60 +616,102 @@ footer .contacto p {
     align-content: center;
     object-fit: cover;
   }
-  .tecno .imgA {
+  .productos .tecno .imgA {
     grid-column: 1/2;
     grid-row: 1/2;
     width: 90%;
     height: 100%;
     justify-content: center;
     align-content: center;
+    object-fit: cover;
   }
-  .tecno .imgB {
+  .productos .tecno .imgB {
     grid-column: 2/3;
     grid-row: 1/2;
     width: 90%;
     height: 100%;
     object-fit: cover;
   }
-  .tecno .imgC {
+  .productos .tecno .imgC {
     grid-column: 3/4;
     grid-row: 1/2;
     width: 90%;
     height: 100%;
     object-fit: cover;
   }
-  .tecno .imgD {
+  .productos .tecno .imgD {
     grid-column: 4/5;
     grid-row: 1/2;
     width: 90%;
     height: 100%;
+    object-fit: cover;
   }
-  .tecno .nombreA {
+  .productos .tecno .nombreA {
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: center;
     margin-top: -2%;
   }
-  .tecno .nombreB {
+  .productos .tecno .nombreB {
     grid-column: 2/3;
     grid-row: 2/3;
     text-align: center;
     margin-top: -2%;
   }
-  .tecno .nombreC {
+  .productos .tecno .nombreC {
     grid-column: 3/4;
     grid-row: 2/3;
     text-align: center;
     margin-top: -2%;
   }
-  .tecno .nombreD {
+  .productos .tecno .nombreD {
     grid-column: 4/5;
     grid-row: 2/3;
     text-align: center;
     margin-top: -2%;
   }
-  footer {
-    margin-top: 5%;
+  .productos footer {
+    margin-top: 100px;
+  }
+  .productos footer .navegacion {
+    position: relative;
+    bottom: 50px;
+  }
+  .productos footer .navegacion ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .productos footer .navegacion ul li {
+    margin: 0 2px;
+  }
+  .productos footer .navegacion ul li .p1 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .productos footer .navegacion ul li .p2 {
+    position: relative;
+    top: 20px;
+    margin-left: -60px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .productos footer .pagos {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .productos footer .pagos p {
+    flex-direction: row;
+    font-weight: 600;
+    margin: 10px;
+  }
+  .productos footer .contacto p {
+    font-weight: 600;
   }
 }
 /* ------------ HTML de Contactos ---------------- */
@@ -485,7 +739,6 @@ footer .contacto p {
 }
 .contactanos {
   background-color: gray;
-  margin-left: 2%;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -512,12 +765,16 @@ footer .contacto p {
 .contactanos footer {
   grid-area: footer;
 }
+.contactanos header section img {
+  width: 10%;
+  object-fit: cover;
+}
 .contactanos header nav {
   display: flex;
   max-width: 100%;
   justify-content: center;
   align-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .contactanos header nav ul {
@@ -585,6 +842,12 @@ footer .contacto p {
   position: relative;
   top: 10px;
 }
+.contactanos .cont1 h1 {
+  text-align: center;
+  color: salmon;
+  text-decoration: underline;
+  margin-top: 30px;
+}
 .contactanos .cont2 {
   width: 100%;
   height: 60vh;
@@ -619,24 +882,80 @@ footer .contacto p {
   cursor: pointer;
 }
 .contactanos footer {
-  margin-top: 40px;
-  margin-left: 10px;
+  width: 100%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 50%;
+  margin-top: 50px;
+  gap: 10px;
+}
+.contactanos footer .navegacion {
+  width: 100%;
+  height: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.contactanos footer .navegacion h3 {
+  text-align: center;
 }
 .contactanos footer .navegacion ul {
-  margin-top: 15px;
-  margin-left: 10px;
+  width: 100%;
 }
-.contactanos footer .navegacion ul li .p2 {
+.contactanos footer .navegacion ul li {
+  list-style: none;
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 10px;
 }
+.contactanos footer .navegacion ul li .p1 {
+  text-decoration: none;
+  color: blanchedalmond;
+  grid-column: 1/2;
+  position: relative;
+  left: 50px;
+}
+.contactanos footer .navegacion ul li .p2 {
+  text-decoration: none;
+  color: blanchedalmond;
+  grid-column: 2/3;
+  position: relative;
+  bottom: 90px;
+}
+.contactanos footer .pagos {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.contactanos footer .pagos h3 {
+  text-align: center;
+}
 .contactanos footer .pagos p {
-  margin: 10px;
+  font-weight: 500;
+  position: relative;
+  left: 40px;
+  margin: 5px;
+}
+.contactanos footer .envios {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.contactanos footer .envios h3 {
+  text-align: center;
 }
 .contactanos footer .contacto {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 20px;
+}
+.contactanos footer .contacto h3 {
+  text-align: center;
+}
+.contactanos footer .contacto p {
+  text-align: center;
+  margin: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -647,9 +966,32 @@ footer .contacto p {
     justify-content: center; /* Centra los elementos verticalmente */
     object-fit: contain;
   }
+  .contactanos header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .contactanos header section {
+    width: 80px;
+    height: auto;
+    display: flex;
+    justify-self: flex-start;
+  }
+  .contactanos header section img {
+    width: 100%;
+  }
+  .contactanos header nav {
+    flex-grow: 1;
+    margin-top: 50px;
+    position: relative;
+    right: 30px;
+  }
   .contactanos header nav ul li a {
     font-size: 30px;
     text-align: center;
+  }
+  .contactanos .cont1 {
+    margin-top: 30px;
   }
   .contactanos .cont1 .redes .p1 {
     font-weight: 600;
@@ -690,34 +1032,40 @@ footer .contacto p {
     height: 30vh;
   }
   .contactanos footer .navegacion h3 {
-    text-align: center;
     font-size: x-large;
+    letter-spacing: 2px;
+    text-align: center;
   }
   .contactanos footer .navegacion ul li .p1 {
     position: relative;
     left: 70px;
   }
   .contactanos footer .navegacion ul li .p2 {
-    margin-top: 10px;
+    position: relative;
+    left: 40px;
   }
   .contactanos footer .pagos h3 {
     font-size: x-large;
+    letter-spacing: 2px;
   }
   .contactanos footer .pagos p {
     position: relative;
     left: 100px;
   }
-  .contactanos footer .contacto h3 {
-    font-size: x-large;
-  }
-  .contactanos footer .contacto p {
+  .contactanos footer .contacto {
     margin-top: 10px;
   }
-  .contactanos footer .envios {
-    text-align: center;
+  .contactanos footer .contacto h3 {
+    font-size: x-large;
+    letter-spacing: 2px;
+  }
+  .contactanos footer .contacto p {
+    font-weight: 600;
+    margin: 10px;
   }
   .contactanos footer .envios h3 {
     font-size: x-large;
+    letter-spacing: 2px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -726,25 +1074,53 @@ footer .contacto p {
     margin-left: 20%;
   }
   .contactanos footer {
-    margin-top: 10%;
+    margin-top: 100px;
+  }
+  .contactanos footer .navegacion {
+    position: relative;
+    bottom: 50px;
+  }
+  .contactanos footer .navegacion ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contactanos footer .navegacion ul li {
+    margin: 0 2px;
+  }
+  .contactanos footer .navegacion ul li .p1 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
   .contactanos footer .navegacion ul li .p2 {
     position: relative;
-    top: 10px;
+    top: 20px;
+    margin-left: -60px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .contactanos footer .pagos {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
   }
   .contactanos footer .pagos p {
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: 700;
+    flex-direction: row;
+    font-weight: 600;
+    margin: 10px;
   }
   .contactanos footer .contacto p {
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 /*------------- Nosotros ------------*/
 .nosotros {
+  width: 100%;
+  height: auto;
   background-color: gray;
   padding: 10px;
 }
@@ -752,6 +1128,10 @@ footer .contacto p {
   margin-top: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.nosotros header .logo img {
+  width: 10%;
+  object-fit: cover;
 }
 .nosotros header nav {
   display: flex;
@@ -766,7 +1146,7 @@ footer .contacto p {
   text-decoration: none;
   color: blanchedalmond;
 }
-.nosotros section {
+.nosotros .description {
   width: 100%;
   margin-top: 10px;
   border: solid 4px black;
@@ -776,14 +1156,20 @@ footer .contacto p {
   justify-content: center;
   align-items: center;
 }
-.nosotros section p {
+.nosotros .description h1 {
+  text-align: center;
+  color: salmon;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+.nosotros .description p {
   margin-top: 20px;
   padding: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 2px;
   font-weight: 600;
 }
-.nosotros section p::before {
+.nosotros .description p::before {
   content: ". ";
   color: salmon;
 }
@@ -878,9 +1264,29 @@ footer .contacto p {
     justify-content: center;
     align-items: center;
   }
-  .nosotros section {
+  .nosotros header {
+    width: 100%;
+    display: flex;
+  }
+  .nosotros header .logo {
+    width: 80px;
+    height: auto;
+  }
+  .nosotros header .logo img {
+    width: 100%;
+  }
+  .nosotros header nav {
+    margin-top: 100px;
+    flex-grow: 1;
+    position: relative;
+    right: 50px;
+  }
+  .nosotros header nav ul li a {
+    font-size: 25px;
+  }
+  .nosotros .description {
     width: 80%;
-    padding: 15px;
+    padding: 5px;
     border: solid 5px black;
     box-shadow: 0 0 3px rgb(0, 0, 0);
     display: flex;
@@ -921,51 +1327,63 @@ footer .contacto p {
   }
 }
 @media screen and (min-width: 1024px) {
-  .nosotros header {
-    margin-top: 10px;
-  }
   .nosotros header nav ul li a {
     font-size: x-large;
   }
-  .nosotros section {
+  .nosotros .description {
     width: 70%;
     padding: 50px;
   }
-  .nosotros section h1 {
+  .nosotros .description h1 {
     position: relative;
     bottom: 30px;
     font-size: 50px;
   }
-  .nosotros section p {
+  .nosotros .description p {
     font-size: large;
   }
   .nosotros footer {
-    margin-top: 90px;
+    margin-top: 100px;
+  }
+  .nosotros footer .navegacion {
+    position: relative;
+    bottom: 50px;
   }
   .nosotros footer .navegacion ul {
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    position: relative;
-    left: 80px;
+    flex-wrap: wrap;
   }
   .nosotros footer .navegacion ul li {
-    display: flex;
-    flex-direction: row;
+    margin: 0 2px;
+  }
+  .nosotros footer .navegacion ul li .p1 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .nosotros footer .navegacion ul li .p2 {
+    position: relative;
+    top: 20px;
+    margin-left: -60px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
   .nosotros footer .pagos {
-    margin-left: 50px;
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
   }
   .nosotros footer .pagos p {
-    font-size: 20px;
-    font-weight: 700;
-    position: relative;
-    left: 80px;
+    flex-direction: row;
+    font-weight: 600;
+    margin: 10px;
   }
   .nosotros footer .contacto p {
-    font-size: 20px;
-    margin: 10px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 /* --------------- Como Comprar -----------------*/
@@ -975,11 +1393,14 @@ footer .contacto p {
   display: flex;
   flex-direction: column;
 }
+.comprar header section img {
+  width: 10%;
+  object-fit: cover;
+}
 .comprar header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
 }
 .comprar header nav ul {
   list-style: none;
@@ -987,6 +1408,11 @@ footer .contacto p {
 .comprar header nav ul li a {
   text-decoration: none;
   color: blanchedalmond;
+}
+.comprar section h1 {
+  text-align: center;
+  color: salmon;
+  text-decoration: underline;
 }
 .comprar section p {
   margin-top: 30px;
@@ -1002,25 +1428,79 @@ footer .contacto p {
   font-weight: 600;
   margin: 10px;
 }
+.comprar footer {
+  width: 100%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50% 50%;
+  margin-top: 50px;
+  gap: 10px;
+}
+.comprar footer .navegacion {
+  width: 100%;
+  height: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.comprar footer .navegacion h3 {
+  text-align: center;
+}
 .comprar footer .navegacion ul {
-  margin-left: 20px;
+  width: 100%;
+}
+.comprar footer .navegacion ul li {
+  list-style: none;
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
 }
 .comprar footer .navegacion ul li .p1 {
+  text-decoration: none;
+  color: blanchedalmond;
+  grid-column: 1/2;
   position: relative;
-  left: 15px;
+  left: 40px;
 }
 .comprar footer .navegacion ul li .p2 {
+  text-decoration: none;
+  color: blanchedalmond;
+  grid-column: 2/3;
   position: relative;
-  top: -90px;
+  bottom: 90px;
+}
+.comprar footer .pagos {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.comprar footer .pagos h3 {
+  text-align: center;
 }
 .comprar footer .pagos p {
-  margin: 8px;
+  font-weight: 500;
+  position: relative;
+  left: 40px;
+}
+.comprar footer .envios {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.comprar footer .envios h3 {
+  text-align: center;
 }
 .comprar footer .contacto {
-  margin: 3px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.comprar footer .contacto h3 {
+  text-align: center;
 }
 .comprar footer .contacto p {
-  margin: 10px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1030,19 +1510,37 @@ footer .contacto p {
     justify-content: center;
     align-items: center;
   }
-  .comprar header ul li a {
+  .comprar header {
+    display: flex;
+    width: 100%;
+  }
+  .comprar header section {
+    width: 80px;
+    height: auto;
+  }
+  .comprar header section img {
+    width: 100%;
+  }
+  .comprar header nav {
+    flex-grow: 1;
+    position: relative;
+    right: 50px;
+    margin-top: 50px;
+  }
+  .comprar header nav ul li a {
     font-size: 25px;
   }
-  .comprar section {
+  .comprar .comocomprar {
     width: 80%;
+    margin-top: 30px;
   }
-  .comprar section p {
+  .comprar .comocomprar p {
     margin: 30px;
   }
-  .comprar section ul {
+  .comprar .comocomprar ul {
     margin: 50px;
   }
-  .comprar section ul li {
+  .comprar .comocomprar ul li {
     margin-top: 30px;
   }
   .comprar footer {
@@ -1101,23 +1599,45 @@ footer .contacto p {
   .comprar footer {
     margin-top: 100px;
   }
+  .comprar footer .navegacion {
+    position: relative;
+    bottom: 50px;
+  }
   .comprar footer .navegacion ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .comprar footer .navegacion ul li {
+    margin: 0 2px;
   }
   .comprar footer .navegacion ul li .p1 {
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
   .comprar footer .navegacion ul li .p2 {
-    margin-top: 140px;
+    position: relative;
+    top: 20px;
+    margin-left: -60px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .comprar footer .pagos {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
   }
   .comprar footer .pagos p {
-    font-size: 20px;
-    font-weight: 700;
+    flex-direction: row;
+    font-weight: 600;
+    margin: 10px;
   }
   .comprar footer .contacto p {
-    font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 

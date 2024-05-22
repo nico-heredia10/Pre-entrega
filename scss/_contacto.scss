@@ -14,7 +14,6 @@
     }
 
     background-color: $color_fondo;
-    margin-left: 2%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -44,12 +43,20 @@
     }
 
     header{
+        section{
+            
+            img{
+                width: 10%;
+                object-fit: cover;
+                
+            }
+        }
         nav{
             display: flex;
             max-width: 100%;
             justify-content: center;
             align-content: center;
-            margin-top: 30px;
+            margin-top: 10px;
             margin-bottom: 10px;
 
             ul{
@@ -136,6 +143,12 @@
             }    
 
         }
+    }
+        h1{
+            text-align: center;
+            color: $color-primario;
+            text-decoration: underline;
+            margin-top:  30px;
         }
 
     }
@@ -185,39 +198,107 @@
     }
 
     footer{
-        margin-top: 40px;
-        margin-left: 10px;
-
+    
+        width: 100%;
+        height: 30vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50% 50%;
+        margin-top: 50px;
+        gap: 10px;
+    
         .navegacion{
-
+    
+            width: 100%;
+            height: auto;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2; 
+           
+            h3{
+                text-align: center;
+            }
+    
             ul{
-                margin-top: 15px;
-                margin-left: 10px;
+                width: 100%;
                 li{
+                    list-style: none;
+                    gap: 5px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin-top: 10px;
+    
+                    .p1{
+                        text-decoration: none;
+                        color: $color-nav;
+                        grid-column: 1 / 2;
+                        position: relative;
+                        left: 50px;
+                        
+                    }
                     .p2{
-                        margin-top: 10px;
+                        text-decoration: none;
+                        color: $color-nav;
+                        grid-column: 2 / 3;
+                        position: relative;
+                        bottom: 90px;
+                        
                     }
                 }
-            }
+    
+                
+            }  
+        
         }
-
+        
         .pagos{
+            
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+    
+            h3{
+                text-align: center;
+            }
+           
             p{
-                margin: 10px;
+                font-weight: 500;
+                position: relative;
+                left: 40px;
+                margin: 5px;
             }
         }
-
+        
+        .envios{
+        
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            
+            
+            h3{
+                text-align: center;
+            }
+        }
+    
         .contacto{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            margin-top: 10px;
             display: flex;
             flex-direction: column;
-            position: relative;
-            top: 20px;
+            
+    
+            h3{
+                text-align: center;
+                
+            }
+            
+            p{
+                text-align: center;
+                margin: 5px;
+            }
+    
         }
-
-        
     }
 
-   
 }
 
 @media  screen and (min-width: 768px) {
@@ -230,9 +311,27 @@
         object-fit: contain;
 
         header{
-            nav{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            section{
+                width: 80px;
+                height: auto;
+                display: flex;
+                justify-self: flex-start;
                 
+               
+                img{
+                    width: 100%;
+                }
+            }
+            nav{
+                flex-grow: 1;
+                margin-top: 50px;
+                position: relative;
+                right: 30px;
                 ul{
+                    
                     li{
                         a{
                             font-size: 30px;
@@ -245,6 +344,7 @@
         }
 
         .cont1{
+            margin-top: 30px;
             .redes{
                 .p1{
                     
@@ -301,8 +401,9 @@
             
             .navegacion{
                 h3{
-                    text-align: center;
                     font-size: x-large;
+                    letter-spacing: 2px;
+                    text-align: center
                 }
     
                 ul{
@@ -316,18 +417,20 @@
                         }
     
                         .p2{
-                            margin-top: 10px;
-                            
-                    
+                            position: relative;
+                            left: 40px;
                         }
                     }
                 }
             }
     
             .pagos{
+
                 h3{
                     font-size: x-large;
+                    letter-spacing: 2px;
                 }
+
                 p{
                     position: relative;
                     left: 100px;
@@ -335,19 +438,22 @@
             }
 
             .contacto{
-
+                margin-top: 10px;
                 h3{
                     font-size: x-large;
+                    letter-spacing: 2px;
                 }
+
                 p{
-                    margin-top: 10px;
+                    font-weight: 600;
+                    margin: 10px;
                 }
             }
-
+            
             .envios{
-                text-align: center;
                 h3{
                     font-size: x-large;
+                    letter-spacing: 2px;
                 }
             }
             
@@ -366,32 +472,52 @@
         }
 
         footer{
-            margin-top: 10%;
-
-           .navegacion{
+            margin-top: 100px;
+            .navegacion{
+                position: relative;
+                bottom: 50px;
                 ul{
+                    display:flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    
                     li{
+                       margin: 0 2px; 
+                        .p1{
+                           margin-top: 20px; 
+                           font-size: 20px;
+                           font-weight: 600;
+                           letter-spacing: 2px;
+                        }
+    
                         .p2{
                             position: relative;
-                            top: 10px;
+                            top: 20px;
+                            margin-left: -60px;
+                            font-size: 20px;
+                            font-weight: 600;
+                            letter-spacing: 2px;
                         }
                     }
                 }
             }
-
+    
             .pagos{
+                position: relative;
+                bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                
                 p{
-                    font-size: 20px;
-                    letter-spacing: 3px;
-                    font-weight: 700;
+                    flex-direction: row;
+                    font-weight: 600;
+                    margin: 10px;
                 }
             }
 
             .contacto{
                 p{
-                    font-size: 20px;
-                    letter-spacing: 3px;
-                    font-weight: 700;
+                    font-weight: 600
                 }
             }
         }
